@@ -5,5 +5,10 @@
   <input type="text" name="Artist Name"><br>
 
   <label>Song Name </label>
-  <input type="text" name="Name" value="">
+  <input type="text" name="Name"><br>
+
+  <label>Genres </label>
+  <% Genre.all.each do |genre| %>
+      <input type="checkbox" id="<%=genre.name%>" name="genres[]" value="<%=genre.id%>">
+  <% end %>
 </form>
